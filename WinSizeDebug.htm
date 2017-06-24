@@ -1,4 +1,4 @@
-<title>WinSize3</title>
+<title>WinSize4</title>
 <script>
 //choose one: alert popup or body document text
 //alert(window.outerWidth + "x" + window.outerHeight);  
@@ -14,10 +14,10 @@ if ((ow == 1600 && oh == 900) || (ow == 1920 && oh == 1080)) {
   ow += 14; oh += 7 } // max window, no adj needed
 
 if (ow == 0 && oh == 0)
-document.write("<br>Error.adj outer/inner: " + (window.innerWidth+2) + "?x" + "?" +
+document.write("<br>Outer best est./inner: " + (window.innerWidth+2) + "?x" + "?" +
 	" / " + window.innerWidth + "x" + window.innerHeight) 
 else
-document.write("<br>Error.adj outer/inner: " + (ow-14) + "x" + (oh-7) +
+document.write("<br>Outer best est./inner: " + (ow-14) + "x" + (oh-7) +
 	" / " + window.innerWidth + "x" + window.innerHeight); 
 </script>
 <br>Refresh if size changes!
