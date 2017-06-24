@@ -15,11 +15,13 @@ var oh = window.outerHeight;
 document.write("Window outer/inner: " + ow + "x" + oh +
 	" / " + window.innerWidth + "x" + window.innerHeight);  
 
-if (ow == 1598 && oh == 908) oh -= 1; //1600x900, near-max true size;
+//adjust outerWidth, Height for best est.  inner sizes OK, no adj. needed
+if (ow == 1598 && oh == 908) oh -= 1; //for 1600x900, near-max true size adj;
 if ((ow == 1600 && oh == 900) || (ow == 1920 && oh == 1080)) { 
-  ow += 14; oh += 7 } // max window, no adj needed
+  ow += 14; oh += 7 } // good max window, no adj needed
 
-if (ow == 0 && oh == 0)
+if (ow == 0 && oh == 0)	//width est assumes 2px vertical frame, no theme
+
 document.write("<br>Outer best est./inner: " + (window.innerWidth+2) + "?x" + "?" +
 	" / " + window.innerWidth + "x" + window.innerHeight) 
 else
