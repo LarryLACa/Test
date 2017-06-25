@@ -11,6 +11,7 @@ Author: LarryLACa   6/23/17 updated as needed
 //document.write("Window size: " + window.outerWidth + "x" + window.outerHeight);
 var ow = window.outerWidth;
 var oh = window.outerHeight;
+var ih = window.innerHeight;
 
 document.write("Window outer/inner: " + ow + "x" + oh +
 	" / " + window.innerWidth + "x" + window.innerHeight);  
@@ -21,7 +22,10 @@ if ((ow == 1600 && oh == 900) || (ow == 1920 && oh == 1080)) {
   ow += 14; oh += 7 } // good max window, no adj needed
 
 if (ow == 0 && oh == 0)	//width est assumes 2px vertical frame, no theme
-
+if (ih == 782)			//1600x900 near-max, with bookmark bar
+document.write("<br>Outer best est./inner: " + (window.innerWidth+2) + "?x" + "900?" +
+	" / " + window.innerWidth + "x" + window.innerHeight) 
+else 
 document.write("<br>Outer best est./inner: " + (window.innerWidth+2) + "?x" + "?" +
 	" / " + window.innerWidth + "x" + window.innerHeight) 
 else
